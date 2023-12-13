@@ -45,7 +45,7 @@ public class Startup
                                 .WithGroupId(kafkaOptions.GroupId)
                                 .WithBufferSize(100)
                                 .WithWorkersCount(3)
-                                .WithAutoOffsetReset(AutoOffsetReset.Earliest)
+                                .WithAutoOffsetReset(AutoOffsetReset.Latest)
                                 .AddMiddlewares(
                                     middlewares => middlewares
                                         .AddDeserializer<MyJsonCoreDeserializer>()

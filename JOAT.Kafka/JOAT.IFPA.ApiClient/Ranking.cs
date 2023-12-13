@@ -17,9 +17,9 @@ public class Ranking
     [DataMember(Order = 3)]
     public string LastName { get; set; }
 
-    [JsonPropertyName("age")]
-    [DataMember(Order = 4)]
-    public int Age { get; set; }
+    //[JsonPropertyName("age")]
+    //[DataMember(Order = 4)]
+    //public string Age { get; set; }
 
     [JsonPropertyName("country_name")]
     [DataMember(Order = 5)]

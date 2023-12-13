@@ -19,7 +19,7 @@ public class RankingsRepository: RepositoryBase, IRankingsRepository
     /// <returns></returns>
     public async Task<Ranking> UpsertAsync(Ranking ranking)
     {
-        var sql = @"RankingUpsert";
+        string sql = @"RankingUpsert";
 
         await this.DbConnection
             .ExecuteScalarAsync<string>(sql, new

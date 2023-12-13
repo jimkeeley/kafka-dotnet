@@ -11,13 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOAT.Kafka.RatingsProducer"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOAT.IFPA.ApiClient", "JOAT.IFPA.ApiClient\JOAT.IFPA.ApiClient.csproj", "{2E97618E-D4C3-40E9-B956-AD2FEA15CF63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOAT.Data", "JOAT.Data\JOAT.Data.csproj", "{0C17D6EF-21FF-4EBD-8C78-9F1150425599}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOAT.Data", "JOAT.Data\JOAT.Data.csproj", "{0C17D6EF-21FF-4EBD-8C78-9F1150425599}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "JOAT.Database", "JOAT.Database\JOAT.Database.sqlproj", "{35E7E93F-5478-45F0-84FD-D87F2E804998}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C979878-1DD0-46C1-A452-F326DB5F412F}"
 	ProjectSection(SolutionItems) = preProject
+		Confluent1.png = Confluent1.png
+		Confluent2.png = Confluent2.png
+		IFPAPostman.png = IFPAPostman.png
 		Readme.md = Readme.md
+		Sql.png = Sql.png
 	EndProjectSection
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B1773B60-6BCB-40F5-A826-DACC6BB072A0}"

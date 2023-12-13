@@ -24,5 +24,7 @@ namespace JOAT.Kafka.Domain.Configuration
 
         public string? GroupId { get; set; }
 
+        public string? ProducerName { get; set; }
+
     }
 }

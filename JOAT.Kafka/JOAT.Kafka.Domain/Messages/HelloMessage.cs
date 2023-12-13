@@ -12,10 +12,5 @@ namespace JOAT.Kafka.Domain.Messages
         public string Text { get; set; } = default!;
     }
 
-    [DataContract]
-    public class TestMessage
-    {
-        [DataMember(Order = 1)]
-        public string Text { get; set; }
-    }
+
 }

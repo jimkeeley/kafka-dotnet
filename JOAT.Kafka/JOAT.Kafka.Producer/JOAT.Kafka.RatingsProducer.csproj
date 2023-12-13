@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PublishAot>true</PublishAot>
+    <PublishAot>false</PublishAot>
     <InvariantGlobalization>true</InvariantGlobalization>
     <UserSecretsId>d50a3a5c-ab90-4b1b-b9a8-35e25a0baed9</UserSecretsId>
     <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
@@ -21,6 +21,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JOAT.IFPA.ApiClient\JOAT.IFPA.ApiClient.csproj" />
     <ProjectReference Include="..\JOAT.Kafka.Consumer\JOAT.Kafka.Consumer.csproj" />
     <ProjectReference Include="..\JOAT.Kafka.Domain\JOAT.Kafka.Domain.csproj" />
   </ItemGroup>

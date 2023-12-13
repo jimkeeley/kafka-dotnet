@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JOAT.IFPA.ApiClient\JOAT.IFPA.ApiClient.csproj" />
     <ProjectReference Include="..\JOAT.Kafka.Domain\JOAT.Kafka.Domain.csproj" />
   </ItemGroup>
 </Project>

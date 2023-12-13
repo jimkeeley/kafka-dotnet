@@ -1,6 +1,4 @@
-﻿using Dapper;
-
-namespace JOAT.Data;
+﻿namespace JOAT.Data;
 
 public static class DapperExtension
 {

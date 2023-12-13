@@ -61,7 +61,7 @@ builder.ConfigureServices(collection =>
                         .AddProducer(
                             kafkaOptions.ProducerName,
                             producer => producer
-                                //.WithCompression(CompressionType.Gzip)
+                                .WithCompression(CompressionType.Gzip)
                                 .DefaultTopic(kafkaOptions.TopicName)
                                 .AddMiddlewares(m => m.AddSerializer<MyJsonCoreSerializer>())
                         );

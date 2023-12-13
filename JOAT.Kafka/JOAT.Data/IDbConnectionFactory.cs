@@ -1,6 +1,4 @@
-﻿using System.Data;
-
-namespace JOAT.Data;
+﻿namespace JOAT.Data;
 
 /// <summary>
 /// Interface for classes that create database connections.

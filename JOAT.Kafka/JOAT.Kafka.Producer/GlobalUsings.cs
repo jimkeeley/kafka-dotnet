@@ -1,5 +1,6 @@
 // Global using directives
 
+global using Confluent.Kafka;
 global using JOAT.IFPA.ApiClient;
 global using JOAT.Kafka.Domain.Configuration;
 global using JOAT.Kafka.Domain.Messages;

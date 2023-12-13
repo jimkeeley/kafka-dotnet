@@ -1,8 +1,4 @@
-﻿using System.Data;
-using Dapper;
-using JOAT.IFPA.ApiClient;
-
-namespace JOAT.Data;
+﻿namespace JOAT.Data;
 
 public class RankingsRepository: RepositoryBase, IRankingsRepository
 {

@@ -1,11 +1,4 @@
-﻿using System.ComponentModel;
-using System.Data;
-using Dapper;
-using Microsoft.Data.SqlClient;
-using Polly;
-using Polly.Retry;
-
-namespace JOAT.Data;
+﻿namespace JOAT.Data;
 
 public class RepositoryBase : IDisposable
 {

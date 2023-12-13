@@ -1,6 +1,4 @@
-﻿using JOAT.IFPA.ApiClient;
-
-namespace JOAT.Data;
+﻿namespace JOAT.Data;
 
 public interface IRankingsRepository
 {

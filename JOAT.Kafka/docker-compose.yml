@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  joat.kafka.ratingsproducer:
+    image: ${DOCKER_REGISTRY-}joatkafkaratingsproducer
+    environment:
+      - USER_SECRETS_ID=aef5e9b3-1546-4f8e-b6bd-521860a2264c
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+    build:
+      context: .
+      dockerfile: JOAT.Kafka.Producer/Dockerfile
+
+  joat.kafka.ratingsconsumer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+    ports:
+      - "8080"
+      - "8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+    image: ${DOCKER_REGISTRY-}joatkafkaratingsconsumer
+    build:
+      context: .
+      dockerfile: JOAT.Kafka.Consumer/Dockerfile
+

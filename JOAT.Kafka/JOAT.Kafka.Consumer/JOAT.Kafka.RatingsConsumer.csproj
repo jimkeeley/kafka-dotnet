@@ -7,25 +7,32 @@
     <Nullable>enable</Nullable>
     <PublishAot>false</PublishAot>
     <InvariantGlobalization>false</InvariantGlobalization>
-    <UserSecretsId>d50a3a5c-ab90-4b1b-b9a8-35e25a0baed9</UserSecretsId>
+    <UserSecretsId>aef5e9b3-1546-4f8e-b6bd-521860a2264c</UserSecretsId>
     <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="KafkaFlow" Version="3.0.2" />
-    <PackageReference Include="KafkaFlow.Compressor.Gzip" Version="3.0.2" />
+    <PackageReference Include="KafkaFlow.Admin" Version="3.0.2" />
     <PackageReference Include="KafkaFlow.Extensions.Hosting" Version="3.0.2" />
+    <PackageReference Include="KafkaFlow.Admin.Dashboard" Version="3.0.2" />
+    <PackageReference Include="KafkaFlow.Admin.WebApi" Version="3.0.2" />
+    <PackageReference Include="KafkaFlow.Compressor.Gzip" Version="3.0.2" />
     <PackageReference Include="KafkaFlow.LogHandler.Console" Version="3.0.2" />
     <PackageReference Include="KafkaFlow.LogHandler.Microsoft" Version="3.0.2" />
     <PackageReference Include="KafkaFlow.Microsoft.DependencyInjection" Version="3.0.2" />
     <PackageReference Include="KafkaFlow.OpenTelemetry" Version="3.0.2" />
     <PackageReference Include="KafkaFlow.Serializer.JsonCore" Version="3.0.2" />
     <PackageReference Include="KafkaFlow.Serializer.ProtobufNet" Version="3.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="[1.19.6-Preview.1, 1.19.6]" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
+
   <ItemGroup>
+    <ProjectReference Include="..\JOAT.Data\JOAT.Data.csproj" />
     <ProjectReference Include="..\JOAT.IFPA.ApiClient\JOAT.IFPA.ApiClient.csproj" />
     <ProjectReference Include="..\JOAT.Kafka.Domain\JOAT.Kafka.Domain.csproj" />
   </ItemGroup>

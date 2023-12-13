@@ -41,9 +41,9 @@ builder.ConfigureServices(collection =>
     collection.Configure<IFPAApiOptions>(configuration.GetSection(key: nameof(ifpaApiOptions)));
 
     //setup Kafka
-    collection.AddKafka(
+    collection.AddKafkaFlowHostedService(
         kafka => kafka
-            .UseConsoleLog()
+            .UseMicrosoftLog()
             .AddCluster(
                 cluster =>
                 {
@@ -57,14 +57,15 @@ builder.ConfigureServices(collection =>
                             information.SaslUsername = kafkaOptions.ApiKey;
                             information.SaslPassword = kafkaOptions.ApiSecret;
                         })
-                        .CreateTopicIfNotExists(kafkaOptions.TopicName, 6, 3)
+                        .CreateTopicIfNotExists(kafkaOptions.TopicName, kafkaOptions.NumberOfPartitions, kafkaOptions.ReplicationFactor)
                         .AddProducer(
                             kafkaOptions.ProducerName,
                             producer => producer
+                                //.WithCompression(CompressionType.Gzip)
                                 .DefaultTopic(kafkaOptions.TopicName)
-                                .AddMiddlewares(m => m.AddSerializer<JsonCoreSerializer>())
+                                .AddMiddlewares(m => m.AddSerializer<MyJsonCoreSerializer>())
                         );
-                })
+                }).AddOpenTelemetryInstrumentation()
     );
 });
 

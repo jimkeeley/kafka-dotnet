@@ -1,16 +1,15 @@
-﻿namespace JOAT.Kafka.Consumer;
+﻿namespace JOAT.Kafka.RatingsConsumer;
 
-public class RankingPersistenceMessageHandler : IMessageHandler<RankingMessage>
+public class RankingPersistenceMessageHandler : IMessageHandler<Ranking>
 {
-    public Task Handle(IMessageContext context, RankingMessage message)
-    {
-        //TODO:Add handler to persist ratings data to db (should be upsert by PlayerId)
-        Console.WriteLine(
-            "Partition: {0} | Offset: {1} | Message: {2}",
-            context.ConsumerContext.Partition,
-            context.ConsumerContext.Offset,
-            message.Ranking);
+    private readonly IRankingsRepository _rankingsRepository;
 
-        return Task.CompletedTask;
+    public RankingPersistenceMessageHandler(IRankingsRepository rankingsRepository)
+    {
+        _rankingsRepository = rankingsRepository;
+    }
+    public async Task Handle(IMessageContext context, Ranking message)
+    {
+        var result = await _rankingsRepository.UpsertAsync(message);
     }
 }

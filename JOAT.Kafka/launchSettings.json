@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "joat.kafka.ratingsproducer": "StartDebugging",
+        "joat.kafka.ratingsconsumer": "StartDebugging"
+      }
+    }
+  }
+}
